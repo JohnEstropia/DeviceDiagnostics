@@ -139,20 +139,20 @@
         NSMutableDictionary *diagnostics = self.diagnostics;
         
         UIDevice *device = [UIDevice currentDevice];
-        diagnostics[@"[UIDevice currentDevice]"] = @{ @"systemVersion": device.systemVersion ?: [NSNull null],
-                                                      @"platform": device.platform ?: [NSNull null],
-                                                      @"hardwareName": device.hardwareName ?: [NSNull null],
-                                                      @"name": device.name ?: [NSNull null],
-                                                      @"model": device.model ?: [NSNull null],
-                                                      @"localizedModel": device.localizedModel ?: [NSNull null],
-                                                      @"systemName": device.systemName ?: [NSNull null] };
+        diagnostics[@"UIDevice"] = @{ @"systemVersion": device.systemVersion ?: [NSNull null],
+                                      @"platform": device.platform ?: [NSNull null],
+                                      @"hardwareName": device.hardwareName ?: [NSNull null],
+                                      @"name": device.name ?: [NSNull null],
+                                      @"model": device.model ?: [NSNull null],
+                                      @"localizedModel": device.localizedModel ?: [NSNull null],
+                                      @"systemName": device.systemName ?: [NSNull null] };
         
         NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
-        diagnostics[@"[NSTimeZone systemTimeZone]"] = @{ @"name": timeZone.name ?: [NSNull null],
-                                                         @"secondsFromGMT": @(timeZone.secondsFromGMT),
-                                                         @"abbreviation": timeZone.abbreviation ?: [NSNull null],
-                                                         @"daylightSavingTime": @(timeZone.daylightSavingTime),
-                                                         @"daylightSavingTimeOffset": @(timeZone.daylightSavingTimeOffset) };
+        diagnostics[@"NSTimeZone"] = @{ @"name": timeZone.name ?: [NSNull null],
+                                        @"secondsFromGMT": @(timeZone.secondsFromGMT),
+                                        @"abbreviation": timeZone.abbreviation ?: [NSNull null],
+                                        @"daylightSavingTime": @(timeZone.daylightSavingTime),
+                                        @"daylightSavingTimeOffset": @(timeZone.daylightSavingTimeOffset) };
         
         CTTelephonyNetworkInfo *networkInfo = [CTTelephonyNetworkInfo new];
         CTCarrier *carrier = networkInfo.subscriberCellularProvider;
@@ -162,8 +162,8 @@
                                                           @"isoCountryCode": carrier.isoCountryCode ?: [NSNull null],
                                                           @"allowsVOIP": @(carrier.allowsVOIP) } : nil;
         
-        diagnostics[@"[CTTelephonyNetworkInfo new]"] = @{ @"currentRadioAccessTechnology": networkInfo.currentRadioAccessTechnology ?: [NSNull null],
-                                                          @"subscriberCellularProvider": cellularProviderInfo ?: [NSNull null] };
+        diagnostics[@"CTTelephonyNetworkInfo"] = @{ @"currentRadioAccessTechnology": networkInfo.currentRadioAccessTechnology ?: [NSNull null],
+                                                    @"subscriberCellularProvider": cellularProviderInfo ?: [NSNull null] };
         
         NSLocale *locale = [NSLocale currentLocale];
         NSCalendar *localeCalendar = [locale objectForKey:NSLocaleCalendar];
@@ -201,26 +201,26 @@
                                                                @"PMSymbol": localeCalendar.PMSymbol ?: [NSNull null] } : nil;
         
         
-        diagnostics[@"[NSLocale currentLocale"] = @{ @"localeIdentifier": locale.localeIdentifier ?: [NSNull null],
-                                                     @"NSLocaleIdentifier": [locale objectForKey:NSLocaleIdentifier] ?: [NSNull null],
-                                                     @"NSLocaleLanguageCode": [locale objectForKey:NSLocaleLanguageCode] ?: [NSNull null],
-                                                     @"NSLocaleCountryCode": [locale objectForKey:NSLocaleCountryCode] ?: [NSNull null],
-                                                     @"NSLocaleScriptCode": [locale objectForKey:NSLocaleScriptCode] ?: [NSNull null],
-                                                     @"NSLocaleVariantCode": [locale objectForKey:NSLocaleVariantCode] ?: [NSNull null],
-                                                     @"NSLocaleExemplarCharacterSet": [locale objectForKey:NSLocaleExemplarCharacterSet] ?: [NSNull null],
-                                                     @"NSLocaleCalendar": localeCalendarInfo ?: [NSNull null],
-                                                     @"NSLocaleCollationIdentifier": [locale objectForKey:NSLocaleCollationIdentifier] ?: [NSNull null],
-                                                     @"NSLocaleUsesMetricSystem": [locale objectForKey:NSLocaleUsesMetricSystem] ?: [NSNull null],
-                                                     @"NSLocaleMeasurementSystem": [locale objectForKey:NSLocaleMeasurementSystem] ?: [NSNull null],
-                                                     @"NSLocaleDecimalSeparator": [locale objectForKey:NSLocaleDecimalSeparator] ?: [NSNull null],
-                                                     @"NSLocaleGroupingSeparator": [locale objectForKey:NSLocaleGroupingSeparator] ?: [NSNull null],
-                                                     @"NSLocaleCurrencySymbol": [locale objectForKey:NSLocaleCurrencySymbol] ?: [NSNull null],
-                                                     @"NSLocaleCurrencyCode": [locale objectForKey:NSLocaleCurrencyCode] ?: [NSNull null],
-                                                     @"NSLocaleCollatorIdentifier": [locale objectForKey:NSLocaleCollatorIdentifier] ?: [NSNull null],
-                                                     @"NSLocaleQuotationBeginDelimiterKey": [locale objectForKey:NSLocaleQuotationBeginDelimiterKey] ?: [NSNull null],
-                                                     @"NSLocaleQuotationEndDelimiterKey": [locale objectForKey:NSLocaleQuotationEndDelimiterKey] ?: [NSNull null],
-                                                     @"NSLocaleAlternateQuotationBeginDelimiterKey": [locale objectForKey:NSLocaleAlternateQuotationBeginDelimiterKey] ?: [NSNull null],
-                                                     @"NSLocaleAlternateQuotationEndDelimiterKey": [locale objectForKey:NSLocaleAlternateQuotationEndDelimiterKey] ?: [NSNull null] };
+        diagnostics[@"NSLocale"] = @{ @"localeIdentifier": locale.localeIdentifier ?: [NSNull null],
+                                      @"NSLocaleIdentifier": [locale objectForKey:NSLocaleIdentifier] ?: [NSNull null],
+                                      @"NSLocaleLanguageCode": [locale objectForKey:NSLocaleLanguageCode] ?: [NSNull null],
+                                      @"NSLocaleCountryCode": [locale objectForKey:NSLocaleCountryCode] ?: [NSNull null],
+                                      @"NSLocaleScriptCode": [locale objectForKey:NSLocaleScriptCode] ?: [NSNull null],
+                                      @"NSLocaleVariantCode": [locale objectForKey:NSLocaleVariantCode] ?: [NSNull null],
+                                      @"NSLocaleExemplarCharacterSet": [locale objectForKey:NSLocaleExemplarCharacterSet] ?: [NSNull null],
+                                      @"NSLocaleCalendar": localeCalendarInfo ?: [NSNull null],
+                                      @"NSLocaleCollationIdentifier": [locale objectForKey:NSLocaleCollationIdentifier] ?: [NSNull null],
+                                      @"NSLocaleUsesMetricSystem": [locale objectForKey:NSLocaleUsesMetricSystem] ?: [NSNull null],
+                                      @"NSLocaleMeasurementSystem": [locale objectForKey:NSLocaleMeasurementSystem] ?: [NSNull null],
+                                      @"NSLocaleDecimalSeparator": [locale objectForKey:NSLocaleDecimalSeparator] ?: [NSNull null],
+                                      @"NSLocaleGroupingSeparator": [locale objectForKey:NSLocaleGroupingSeparator] ?: [NSNull null],
+                                      @"NSLocaleCurrencySymbol": [locale objectForKey:NSLocaleCurrencySymbol] ?: [NSNull null],
+                                      @"NSLocaleCurrencyCode": [locale objectForKey:NSLocaleCurrencyCode] ?: [NSNull null],
+                                      @"NSLocaleCollatorIdentifier": [locale objectForKey:NSLocaleCollatorIdentifier] ?: [NSNull null],
+                                      @"NSLocaleQuotationBeginDelimiterKey": [locale objectForKey:NSLocaleQuotationBeginDelimiterKey] ?: [NSNull null],
+                                      @"NSLocaleQuotationEndDelimiterKey": [locale objectForKey:NSLocaleQuotationEndDelimiterKey] ?: [NSNull null],
+                                      @"NSLocaleAlternateQuotationBeginDelimiterKey": [locale objectForKey:NSLocaleAlternateQuotationBeginDelimiterKey] ?: [NSNull null],
+                                      @"NSLocaleAlternateQuotationEndDelimiterKey": [locale objectForKey:NSLocaleAlternateQuotationEndDelimiterKey] ?: [NSNull null] };
     });
 }
 

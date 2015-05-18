@@ -72,6 +72,7 @@
 		B55FB70D1B0994480028D044 /* JEUIMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FB6CB1B0994480028D044 /* JEUIMetrics.m */; };
 		B55FB70E1B0994480028D044 /* JEWeakCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FB6CF1B0994480028D044 /* JEWeakCache.m */; };
 		B55FB7101B09B9480028D044 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FB70F1B09B9480028D044 /* CoreTelephony.framework */; };
+		B55FB7131B09C8140028D044 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FB7121B09C8140028D044 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,7 @@
 		B55FB6CE1B0994480028D044 /* JEWeakCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JEWeakCache.h; sourceTree = "<group>"; };
 		B55FB6CF1B0994480028D044 /* JEWeakCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JEWeakCache.m; sourceTree = "<group>"; };
 		B55FB70F1B09B9480028D044 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B55FB7121B09C8140028D044 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55FB7131B09C8140028D044 /* CoreLocation.framework in Frameworks */,
 				B55FB7101B09B9480028D044 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +513,7 @@
 		B55FB7111B09B9500028D044 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B55FB7121B09C8140028D044 /* CoreLocation.framework */,
 				B55FB70F1B09B9480028D044 /* CoreTelephony.framework */,
 			);
 			name = Frameworks;

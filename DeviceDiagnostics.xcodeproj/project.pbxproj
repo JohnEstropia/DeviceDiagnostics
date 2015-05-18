@@ -12,7 +12,6 @@
 		B55FB62B1B09913D0028D044 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FB62A1B09913D0028D044 /* ViewController.m */; };
 		B55FB62E1B09913D0028D044 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55FB62C1B09913D0028D044 /* Main.storyboard */; };
 		B55FB6301B09913D0028D044 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55FB62F1B09913D0028D044 /* Images.xcassets */; };
-		B55FB6331B09913D0028D044 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55FB6311B09913D0028D044 /* LaunchScreen.xib */; };
 		B55FB63F1B09913D0028D044 /* DeviceDiagnosticsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FB63E1B09913D0028D044 /* DeviceDiagnosticsTests.m */; };
 		B55FB6D11B0994480028D044 /* NSArray+JEDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FB64D1B0994480028D044 /* NSArray+JEDebugging.m */; };
 		B55FB6D21B0994480028D044 /* NSDate+JEDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FB64F1B0994480028D044 /* NSDate+JEDebugging.m */; };
@@ -95,7 +94,6 @@
 		B55FB62A1B09913D0028D044 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B55FB62D1B09913D0028D044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B55FB62F1B09913D0028D044 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B55FB6321B09913D0028D044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B55FB6381B09913D0028D044 /* DeviceDiagnosticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceDiagnosticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55FB63D1B09913D0028D044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55FB63E1B09913D0028D044 /* DeviceDiagnosticsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceDiagnosticsTests.m; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 				B55FB62A1B09913D0028D044 /* ViewController.m */,
 				B55FB62C1B09913D0028D044 /* Main.storyboard */,
 				B55FB62F1B09913D0028D044 /* Images.xcassets */,
-				B55FB6311B09913D0028D044 /* LaunchScreen.xib */,
 				B55FB6481B0994480028D044 /* JEToolkit */,
 				B55FB6221B09913D0028D044 /* Supporting Files */,
 			);
@@ -600,7 +597,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55FB62E1B09913D0028D044 /* Main.storyboard in Resources */,
-				B55FB6331B09913D0028D044 /* LaunchScreen.xib in Resources */,
 				B55FB6301B09913D0028D044 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,14 +705,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B55FB6311B09913D0028D044 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B55FB6321B09913D0028D044 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -804,7 +792,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DeviceDiagnostics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -814,7 +805,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = DeviceDiagnostics/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -35,7 +35,7 @@
     
     [super viewDidLoad];
     
-    UIColor *backgroundColor = [UIColor colorWithInt:0x34495e alpha:1.0];
+    UIColor *backgroundColor = [UIColor colorWithInt:0x2c3e50 alpha:1.0];
     UIColor *foregroundColor = [UIColor colorWithInt:0xecf0f1 alpha:1.0];
     
     self.view.backgroundColor = backgroundColor;
@@ -88,14 +88,14 @@
     
     CLLocation *location = locations.firstObject;
     NSDictionary *locationInfo = location ? @{ @"coordinate": @{ @"latitude": @(location.coordinate.latitude),
-                                                                    @"longitude": @(location.coordinate.longitude) },
-                                                  
-                                                  @"altitude": @(location.altitude),
-                                                  @"horizontalAccuracy": @(location.horizontalAccuracy),
-                                                  @"verticalAccuracy": @(location.verticalAccuracy),
-                                                  @"course": @(location.course),
-                                                  @"speed": @(location.speed),
-                                                  @"timestamp": location.timestamp ?: [NSNull null] } : nil;
+                                                                 @"longitude": @(location.coordinate.longitude) },
+                                               
+                                               @"altitude": @(location.altitude),
+                                               @"horizontalAccuracy": @(location.horizontalAccuracy),
+                                               @"verticalAccuracy": @(location.verticalAccuracy),
+                                               @"course": @(location.course),
+                                               @"speed": @(location.speed),
+                                               @"timestamp": location.timestamp ?: [NSNull null] } : nil;
     self.diagnostics[@"[CLLocationManager new].location"] = locationInfo ?: [NSNull null];
     
     if (location) {

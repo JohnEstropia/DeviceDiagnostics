@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1D50C173-682A-4A33-ABC0-F0462367F77B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>477E7B39AF0387DDE07528ED7A27C2C8F8D7DA48</key>
+		<string>https://github.com/JohnEstropia/DeviceDiagnostics.git</string>
+		<key>6533DCA9C1C673037DD2F49A7574B681383114AB</key>
+		<string>https://github.com/JohnEstropia/JEToolkit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DeviceDiagnostics.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>477E7B39AF0387DDE07528ED7A27C2C8F8D7DA48</key>
+		<string>../..</string>
+		<key>6533DCA9C1C673037DD2F49A7574B681383114AB</key>
+		<string>../..JEToolkit</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JohnEstropia/DeviceDiagnostics.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>477E7B39AF0387DDE07528ED7A27C2C8F8D7DA48</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>477E7B39AF0387DDE07528ED7A27C2C8F8D7DA48</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DeviceDiagnostics</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6533DCA9C1C673037DD2F49A7574B681383114AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DeviceDiagnosticsJEToolkit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

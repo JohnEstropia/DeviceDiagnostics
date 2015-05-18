@@ -67,7 +67,7 @@
         JEScopeStrong(self);
         self.textView.text = [self.diagnostics loggingDescriptionIncludeClass:NO includeAddress:NO];
         self.textView.hidden = NO;
-        self.button.enabled = true;
+        self.button.hidden = NO;
         [self.view.layer addAnimation:[CATransition new] forKey:nil];
     });
 }

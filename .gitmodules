@@ -1,0 +1,3 @@
+[submodule "JEToolkit"]
+	path = JEToolkit
+	url = https://github.com/JohnEstropia/JEToolkit.git
